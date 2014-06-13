@@ -6,14 +6,24 @@
 
 def get_input
   #Get input from the user.
+  gets.chomp 
 end
 
 def calculate_upvotes(story, category)
+	upvotes=1
 	# Write code so that:
 		# If the Story is about cats multiply the upvotes by 5
 		# If the Story is about bacon multiply the upvotes by 8
 		# If the Story is about Food it gets 3 times the upvotes.
-
+	if category == 'cats' or story.include? "cat"
+		upvotes*5
+	elsif category == 'bacon' or story.include? "bacon"
+		upvotes*8
+	elsif category == 'Food' or story.include? "Food"
+		upvotes*3
+	else
+		upvotes*1
+	end
 	#For example:
 	# "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
 end

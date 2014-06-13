@@ -181,11 +181,11 @@ class.
 
 	module Upvotable
 		def upvote!
-  		@upvote += 1
+  		@upvotes += 1
   	end
 
   	def downvote!
-  		@upvote -= 1
+  		@upvotes -= 1
   	end
 	end
 
