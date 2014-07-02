@@ -1,0 +1,26 @@
+<% if @secret_throw == 0 %>
+	<h1>Dealer throws paper</h1>
+<% elsif @secret_throw == 1 %>
+	<h1>Dealer throws rock</h1>
+<% else %>
+	<h1>Dealer throws scissors</h1>
+<% end %>
+
+
+<% if @secret_throw == @choosen_throw %> 
+	<h1>Draw!</h1>
+<% elsif (@secret_throw+1) == @choosen_throw %> 
+	<h1>You lose! </h1>
+<% elsif (@secret_throw-1) == @choosen_throw %> 
+	<h1>You win! </h1>
+<% elsif (@secret_throw+2) == @choosen_throw %> 
+	<h1>You win! </h1>
+<% elsif (@secret_throw-2) == @choosen_throw %> 
+	<h1>You lose! </h1>
+<%end %>
+
+
+<%= link_to "Play again", new_rock_paper_scissor_path %>
+<%= link_to "Home", games_path %>
+
+
